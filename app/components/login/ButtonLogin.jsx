@@ -1,16 +1,20 @@
 import Link from "next/link";
 import React from "react";
 
-const LoginPage = (props) => {
-  if (props.isLogin) {
+const LoginPage = ({ gashawName, children, isLogin }) => {
+  if (isLogin) {
     return (
       <div>
-        <Link href="/dashboard"> welcome {props.gashawName}</Link>
+        <div>
+          {gashawName}
+          {children}
+        </div>
       </div>
     );
-  } else {
-    return <button>login</button>;
-  }
+  } else return;
+  <div>
+    <button className="btn btn-primary">login</button>;
+  </div>;
 };
 
 export default LoginPage;

@@ -2,13 +2,15 @@ import Image from "next/image";
 import LoginPage from "./components/login/ButtonLogin";
 
 export default function Home() {
-  const isLogin = true;
+  const isLogin = false;
   const name = "gashaw";
   return (
     <main className="">
-      <div>
+      <div className=" btn btn-prim">
         <h1> home page</h1>
-        <LoginPage isLogin={isLogin} gashawName={name} />
+        <LoginPage isLogin={isLogin} gashawName={name}>
+          <div> children test</div>
+        </LoginPage>
       </div>
     </main>
   );
